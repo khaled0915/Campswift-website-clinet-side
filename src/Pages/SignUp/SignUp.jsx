@@ -78,8 +78,10 @@ const SignUp = () => {
         
         <div className="hero min-h-screen bg-base-200">
           <div className="hero-content flex-col lg:flex-row-reverse">
-            <div className="text-center lg:text-left">
-              <h1 className="text-5xl font-bold"> Sign Up now!</h1>
+            <div className="text-center lg:text-left px-5">
+              <h1 className="text-5xl my-6 underline font-bold"> Sign Up now!</h1>
+
+              <img className="w-[500px] h-[400px]" src="https://i.ibb.co/mFZp7zH/6368592.jpg" alt="" />
 
             </div>
             <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">

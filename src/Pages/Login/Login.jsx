@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 
 
 const Login = () => {
@@ -74,7 +75,10 @@ const Login = () => {
            <div className="hero min-h-screen bg-base-200">
   <div className="hero-content flex-col md:flex-row-reverse">
     <div className="text-center w-auto lg:text-left">
-      <h1 className="text-5xl font-bold">Login now!</h1>
+    <h1 className="text-5xl my-7 underline font-bold">Login now!</h1>
+    
+        <img className="w-[400px] h-[300px]" src="https://i.ibb.co/xzv4tj4/3094352.jpg" alt="" />
+    
      
     </div>
     <div className="card md:w-3/4 max-w-sm shadow-2xl bg-base-100">
@@ -110,6 +114,8 @@ const Login = () => {
         
         
          </p>
+
+         <SocialLogin></SocialLogin>
     </div>
   </div>
 </div>
