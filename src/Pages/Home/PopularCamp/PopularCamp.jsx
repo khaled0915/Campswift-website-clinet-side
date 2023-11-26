@@ -8,8 +8,11 @@ const PopularCamp = () => {
 
     const [camps] = useCamp();
 
+    const popularCamp = camps.filter( item => item.category ===  'popular' )
+
    
     console.log(camps);
+    console.log(popularCamp);
 
 
 
@@ -26,7 +29,7 @@ const PopularCamp = () => {
 
            <div className="grid  grid-cols-1 md:grid-cols-2 gap-5">
             {
-               camps.map( camp => <CampCard key={camp.id} 
+               popularCamp.map( camp => <CampCard key={camp._id} 
                
                 camp={camp}
                > </CampCard> )

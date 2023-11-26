@@ -9,7 +9,8 @@ const CampCard = ({camp}) => {
 
         image , scheduledDateTime ,targetAudience ,
         venueLocation ,campFees
-    } = camp ;
+    } 
+    = camp ;
 
     return (
         <div>

@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Banner from "./Banner/Banner";
 import PopularCamp from "../PopularCamp/PopularCamp";
+import Testimonials from "../Testimonials/Testimonials";
 // import { useLoaderData } from "react-router-dom";
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
             </Helmet>
             <Banner></Banner>
             <PopularCamp></PopularCamp>
+            <Testimonials></Testimonials>
 
 
             {/* <div>

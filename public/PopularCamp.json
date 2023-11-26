@@ -9,7 +9,8 @@
     "specializedServices": ["General Health Checkup", "Nutrition Consultation"],
     "healthcareProfessionals": ["Dr. Smith Johnson", "Nurse Emily Williams"],
     "targetAudience": "All Ages",
-    "purposeBenefits": "Promoting a holistic approach to health. Get personalized health checkups and nutritional advice. Children under 12 receive free health assessments to ensure a healthy start in life."
+    "purposeBenefits": "Promoting a holistic approach to health. Get personalized health checkups and nutritional advice. Children under 12 receive free health assessments to ensure a healthy start in life.",
+    "category": "popular"
   },
   {
     "id": 2,
@@ -21,7 +22,8 @@
     "specializedServices": ["Cardiac Screening", "Blood Pressure Monitoring"],
     "healthcareProfessionals": ["Cardiologist Dr. Laura Martinez", "Nurse Michael Brown"],
     "targetAudience": "Adults",
-    "purposeBenefits": "Empowering adults to prioritize heart health. Receive specialized cardiac screenings and blood pressure monitoring. Gain valuable insights from renowned cardiologists for a healthier heart."
+    "purposeBenefits": "Empowering adults to prioritize heart health. Receive specialized cardiac screenings and blood pressure monitoring. Gain valuable insights from renowned cardiologists for a healthier heart.",
+    "category": "popular"
   },
   {
     "id": 3,
@@ -33,7 +35,8 @@
     "specializedServices": ["Pediatric Checkup", "Immunization Clinic"],
     "healthcareProfessionals": ["Pediatrician Dr. Sarah Davis", "Nurse Jessica Taylor"],
     "targetAudience": "Children and Parents",
-    "purposeBenefits": "Dedicated to the well-being of our youngest community members. Ensure your child's health with free pediatric checkups and immunization clinics. Parents can access expert advice on child care and development."
+    "purposeBenefits": "Dedicated to the well-being of our youngest community members. Ensure your child's health with free pediatric checkups and immunization clinics. Parents can access expert advice on child care and development.",
+    "category": "popular"
   },
   {
     "id": 4,
@@ -45,7 +48,8 @@
     "specializedServices": ["Geriatric Consultation", "Fall Risk Assessment"],
     "healthcareProfessionals": ["Gerontologist Dr. James Anderson", "Nurse Olivia Miller"],
     "targetAudience": "Seniors",
-    "purposeBenefits": "Catering specifically to seniors with personalized geriatric consultations and fall risk assessments. Ensure a healthy and active lifestyle in your golden years with expert guidance."
+    "purposeBenefits": "Catering specifically to seniors with personalized geriatric consultations and fall risk assessments. Ensure a healthy and active lifestyle in your golden years with expert guidance.",
+    "category": "popular"
   },
   {
     "id": 5,
@@ -57,7 +61,8 @@
     "specializedServices": ["Gynecological Checkup", "Women's Health Workshops"],
     "healthcareProfessionals": ["OB-GYN Dr. Rachel White", "Nurse Sophia Clark"],
     "targetAudience": "Women",
-    "purposeBenefits": "Empowering women through comprehensive health services. Receive gynecological checkups and participate in women's health workshops. Gain insights from leading healthcare professionals for your well-being."
+    "purposeBenefits": "Empowering women through comprehensive health services. Receive gynecological checkups and participate in women's health workshops. Gain insights from leading healthcare professionals for your well-being.",
+    "category": "popular"
   },
   {
     "id": 6,
@@ -69,6 +74,85 @@
     "specializedServices": ["Counseling Sessions", "Stress Management Workshops"],
     "healthcareProfessionals": ["Psychiatrist Dr. Michael Lee", "Counselor Emma Adams"],
     "targetAudience": "All Ages",
-    "purposeBenefits": "Promoting mental well-being through counseling sessions and stress management workshops. Join us for a day of awareness and support for mental health for individuals of all ages."
+    "purposeBenefits": "Promoting mental well-being through counseling sessions and stress management workshops. Join us for a day of awareness and support for mental health for individuals of all ages.",
+    "category": "popular"
+  },
+  {
+    "id": 7,
+    "campName": "Family Wellness Day",
+    "image": "https://i.ibb.co/x31jwZM/family-wellness.jpg",
+    "campFees": "$20 (Free for children under 5)",
+    "scheduledDateTime": "2023-09-10T10:00:00",
+    "venueLocation": "Community Recreation Center",
+    "specializedServices": ["Family Health Checkup", "Fitness Workshops"],
+    "healthcareProfessionals": ["Dr. Jennifer Adams", "Nurse Mark Taylor"],
+    "targetAudience": "Families",
+    "purposeBenefits": "Promoting the well-being of entire families through health checkups and fitness workshops. Free health assessments for children under 5 to ensure a healthy and happy family life.",
+    "category": "available-camps"
+  },
+  {
+    "id": 8,
+    "campName": "Dental Care Clinic",
+    "image": "https://i.ibb.co/qNZ4VJd/dental-care.jpg",
+    "campFees": "$25",
+    "scheduledDateTime": "2023-10-05T14:30:00",
+    "venueLocation": "City Dental Care Center",
+    "specializedServices": ["Dental Checkup", "Oral Hygiene Seminars"],
+    "healthcareProfessionals": ["Dentist Dr. Robert White", "Dental Hygienist Megan Davis"],
+    "targetAudience": "All Ages",
+    "purposeBenefits": "Ensuring good oral health for all ages through comprehensive dental checkups and informative oral hygiene seminars. Smile with confidence!",
+    "category": "available-camps"
+  },
+  {
+    "id": 9,
+    "campName": "Nutrition and Fitness Expo",
+    "image": "https://i.ibb.co/C9M4bYS/nutrition-fitness.jpg",
+    "campFees": "$15",
+    "scheduledDateTime": "2023-11-12T11:30:00",
+    "venueLocation": "FitLife Gymnasium",
+    "specializedServices": ["Nutritional Consultation", "Fitness Assessments"],
+    "healthcareProfessionals": ["Nutritionist Lisa Johnson", "Fitness Trainer Chris Martin"],
+    "targetAudience": "Adults",
+    "purposeBenefits": "Empowering adults to achieve their health and fitness goals. Receive personalized nutritional advice and fitness assessments for a healthier lifestyle.",
+    "category": "available-camps"
+  },
+  {
+    "id": 10,
+    "campName": "Vision Care Workshop",
+    "image": "https://i.ibb.co/gjbPVJZ/vision-care.jpg",
+    "campFees": "$18",
+    "scheduledDateTime": "2023-12-08T13:45:00",
+    "venueLocation": "City Vision Care Clinic",
+    "specializedServices": ["Vision Screening", "Eye Health Seminars"],
+    "healthcareProfessionals": ["Optometrist Dr. Sarah Miller", "Vision Specialist Emma Wilson"],
+    "targetAudience": "All Ages",
+    "purposeBenefits": "Caring for your eyes with comprehensive vision screenings and informative seminars on maintaining optimal eye health. See the world clearly!",
+    "category": "available-camps"
+  },
+  {
+    "id": 11,
+    "campName": "Community Blood Drive",
+    "image": "https://i.ibb.co/NKwL0Nk/blood-drive.jpg",
+    "campFees": "Free",
+    "scheduledDateTime": "2024-01-20T09:00:00",
+    "venueLocation": "Community Blood Center",
+    "specializedServices": ["Blood Donation", "Health Checkup"],
+    "healthcareProfessionals": ["Medical Team Volunteers"],
+    "targetAudience": "Adults",
+    "purposeBenefits": "Saving lives through blood donation. Participate in the community blood drive and receive a free health checkup as a token of appreciation.",
+    "category": "available-camps"
+  },
+  {
+    "id": 12,
+    "campName": "Diabetes Management Workshop",
+    "image": "https://i.ibb.co/rxL7ZKW/diabetes-management.jpg",
+    "campFees": "$12",
+    "scheduledDateTime": "2024-02-15T15:15:00",
+    "venueLocation": "City Diabetes Care Center",
+    "specializedServices": ["Diabetes Education", "Blood Sugar Monitoring"],
+    "healthcareProfessionals": ["Endocrinologist Dr. Michael Carter", "Diabetes Educator Sarah Turner"],
+    "targetAudience": "Adults, Seniors",
+    "purposeBenefits": "Empowering individuals with diabetes through education and personalized management plans. Learn effective strategies for a healthier life with diabetes.",
+    "category": "available-camps"
   }
 ]

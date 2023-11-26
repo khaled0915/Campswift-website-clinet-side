@@ -1,0 +1,38 @@
+[
+    {
+        "_id": "1",
+        "userName": "Alice Johnson",
+        "details": "Attended the Healthy Living Expo and had a fantastic experience. The general health checkup and nutrition consultation were very informative. Dr. Smith Johnson and Nurse Emily Williams provided excellent care. Would highly recommend!",
+        "rating": 5
+    },
+    {
+        "_id": "2",
+        "userName": "Bob Smith",
+        "details": "Participated in the Heart Health Symposium and was impressed by the thorough cardiac screening and blood pressure monitoring. The insights from Cardiologist Dr. Laura Martinez were valuable. Nurse Michael Brown was very professional. A great event for heart health awareness!",
+        "rating": 4
+    },
+    {
+        "_id": "3",
+        "userName": "Charlie Brown",
+        "details": "Took my child to the Pediatric Wellness Fair. The pediatric checkup and immunization clinic were well-organized. Dr. Sarah Davis and Nurse Jessica Taylor were friendly and answered all our questions. A wonderful initiative for children's health!",
+        "rating": 5
+    },
+    {
+        "_id": "4",
+        "userName": "Diana Miller",
+        "details": "Attended the Senior Health Expo and found the geriatric consultation and fall risk assessment beneficial. Dr. James Anderson and Nurse Olivia Miller provided personalized care for seniors. Great support for the elderly!",
+        "rating": 4
+    },
+    {
+        "_id": "5",
+        "userName": "Eva White",
+        "details": "Participated in the Women's Wellness Summit. The gynecological checkup and women's health workshops were enlightening. Dr. Rachel White and Nurse Sophia Clark created a supportive environment. Highly recommended for women's health!",
+        "rating": 5
+    },
+    {
+        "_id": "6",
+        "userName": "Frank Johnson",
+        "details": "Joined the Mental Health Awareness Day and benefited from counseling sessions and stress management workshops. Dr. Michael Lee and Counselor Emma Adams were compassionate and understanding. A valuable event for mental well-being!",
+        "rating": 4.5
+    }
+]

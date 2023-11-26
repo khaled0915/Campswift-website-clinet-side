@@ -2,9 +2,27 @@ import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import CampDetailsPage from "./CampDetailsPage";
 import useCamp from "../../hooks/useCamp";
+import { Helmet } from "react-helmet-async";
 
 
 const CampDetails = () => {
+
+
+
+    const handleJoinCamp = event =>{
+        event.preventDefault();
+        const form  = event.target;
+        
+        const email = form.email.value ;
+
+        const password = form.password.value ; 
+
+        console.log(email , password);
+
+       
+    }
+
+
 
     const [camp] = useCamp();
   console.log(camp);
@@ -29,6 +47,10 @@ const CampDetails = () => {
 
   return (
     <div>
+        <Helmet>
+                <title> CampSwift | Camp_Details  </title>
+
+            </Helmet>
       <div className="hero min-h-screen bg-base-200">
      
         <div className="hero-content flex-col lg:flex-row-reverse">
@@ -66,6 +88,37 @@ className="btn mt-10  btn-outline btn-primary mx-auto"
 
   <div className="modal-box">
 
+  <form onSubmit={handleJoinCamp} className="card-body">
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text"> Name </span>
+          </label>
+          <input type="text" name='name' placeholder="Your Name" className="input input-bordered" required />
+        </div>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text"> Age </span>
+          </label>
+          <input type="number" name='age' placeholder="age" className="input input-bordered" required />
+
+          
+        </div>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text"> Phone </span>
+          </label>
+          <input type="number" name='phone' placeholder="phone" className="input input-bordered" required />
+
+          
+        </div>
+        <div className="form-control mt-6">
+
+          
+
+          <input type="submit" value='Login' className="btn btn-secondary btn-outline" />
+        </div>
+      </form>
+
 
     <h3 className="font-bold text-lg">Hello!</h3>
     <p className="py-4">Press ESC key or click the button below to close</p>
@@ -74,8 +127,9 @@ className="btn mt-10  btn-outline btn-primary mx-auto"
         {/* if there is a button in form, it will close the modal */}
         <button className="btn">Close</button>
       </form>
+
     </div>
-    
+
   </div>
 </dialog>
           </div>
