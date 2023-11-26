@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 
 
 const CampCard = ({camp}) => {
     console.log(camp);
 
-    const {id , specializedServices
+    const {_id , specializedServices
         , campName , healthcareProfessionals ,
 
         image , scheduledDateTime ,targetAudience ,
@@ -61,7 +62,13 @@ const CampCard = ({camp}) => {
              <p className="bg-orange-700 text-white font-bold hover:underline mt-10 ">   camp Fees : {campFees} </p>
 
 
-             <button className="btn btn-outline btn-success mt-5 "> Details  </button>
+            <Link to={`/camp/camp-details/${_id}`} > 
+            
+            <button 
+
+             
+className="btn btn-outline btn-success mt-5 "> Details  </button>
+             </Link>
 
 
 

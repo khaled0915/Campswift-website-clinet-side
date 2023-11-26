@@ -11,7 +11,7 @@ const useCamp = () => {
     useEffect( ()=>{
 
 
-        fetch('PopularCamp.json')
+        fetch('http://localhost:5000/camp')
         .then(res => res.json())
         .then(data =>{
             setCamp(data);
