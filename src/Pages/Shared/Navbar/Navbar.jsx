@@ -1,8 +1,20 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../Providers/AuthProvider";
 
 
 const Navbar = () => {
 
+
+    const {user , logOut} = useContext(AuthContext);
+
+    const handleLogOut = () =>{
+
+        logOut()
+        .then(() =>{})
+        .catch( error => console.log(error) )
+
+    }
 
 
     const navbarOPtions =
@@ -32,6 +44,8 @@ const Navbar = () => {
 
             </Link> </li>
 
+            
+
         </>
     return (
         <div className="navbar bg-base-100">
@@ -44,6 +58,10 @@ const Navbar = () => {
                         {navbarOPtions}
                     </ul>
                 </div>
+
+
+           
+                <img className="w-[50px] h-[50px]" src="https://i.ibb.co/nPNPcsZ/medical-camp.webp" alt="" />
                 <a className="btn btn-ghost text-xl">CampSwift</a>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -52,11 +70,50 @@ const Navbar = () => {
                 </ul>
             </div>
 
-            <Link to='/login'> 
+            {
+
+                user ? 
+
+                <>
+
+<div className="dropdown dropdown-right dropdown-end">
+  <label tabIndex={0} className="btn m-1"> 
+
+  <img    className="w-[40px] h-[40px] rounded-full" src={user?.photoURL
+} alt="" />
+  
+   </label>
+
+  <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+    
+    <li>  <button className="btn btn-outline btn-accent  " onClick={handleLogOut}>  <span className="text-center my-2"> SignOut  </span>  </button> </li>
+
+  </ul>
+</div>
+
+                
+             
+
+
+                
+                 </>
+
+                     :
+
+                <>
+
+{/* <img onClick={handleLogOut} className="w-[40px] h-[40px] rounded-full" src={user?.photoURL
+} alt="" /> */}
+
+                
+                <Link to='/login'> 
             
-            <div className="navbar-end">
-                <a className="btn"> Login </a>
-            </div> </Link>
+                <div className="md:navbar-end">
+                    <a className="btn"> Login </a>
+                </div> </Link>
+
+                 </>
+            }
         </div>
     );
 };
