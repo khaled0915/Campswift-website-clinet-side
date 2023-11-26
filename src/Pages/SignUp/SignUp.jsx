@@ -5,6 +5,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import { useForm } from "react-hook-form";
 import { Result } from "postcss";
 import Swal from "sweetalert2";
+import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 
 
 
@@ -154,6 +155,10 @@ const SignUp = () => {
               
         
               <p className="px-6"> <small> Already have an account ? <Link className="text-xl p-4 text-green-600 font-extrabold hover:underline " to='/login'> Login </Link> </small> </p>
+
+              <p className="mt-5 p-5 text-center font-extrabold bg-cyan-500 "> Or Sign Up with Google  </p>
+
+              <SocialLogin></SocialLogin>
             </div>
           </div>
         </div>

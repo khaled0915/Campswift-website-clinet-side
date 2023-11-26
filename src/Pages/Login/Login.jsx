@@ -114,6 +114,7 @@ const Login = () => {
         
         
          </p>
+         <p className="text-center font-bold bg-green-400"> Or Sign In with Google  </p>
 
          <SocialLogin></SocialLogin>
     </div>

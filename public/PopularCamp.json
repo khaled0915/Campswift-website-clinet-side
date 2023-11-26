@@ -1,0 +1,69 @@
+[
+    {
+      "id": 1,
+      "campName": "Healthy Living Expo",
+      "image": "https://i.ibb.co/yFVTy1c/5071654.jpg",
+      "campFees": "$10 (Free for children under 12)",
+      "scheduledDateTime": "2023-03-15T09:00:00",
+      "venueLocation": "City Convention Center",
+      "specializedServices": ["General Health Checkup", "Nutrition Consultation"],
+      "healthcareProfessionals": ["Dr. Smith Johnson", "Nurse Emily Williams"],
+      "targetAudience": "All Ages"
+    },
+    {
+      "id": 2,
+      "campName": "Heart Health Symposium",
+      "image": "https://i.ibb.co/RC5C4Pz/Pngtree-stethoscope-heart-health-medical-6778533.png",
+      "campFees": "$15",
+      "scheduledDateTime": "2023-04-20T10:30:00",
+      "venueLocation": "Community Hall",
+      "specializedServices": ["Cardiac Screening", "Blood Pressure Monitoring"],
+      "healthcareProfessionals": ["Cardiologist Dr. Laura Martinez", "Nurse Michael Brown"],
+      "targetAudience": "Adults"
+    },
+    {
+      "id": 3,
+      "campName": "Pediatric Wellness Fair",
+      "image": "https://i.ibb.co/6Fzph8f/pngegg.png",
+      "campFees": "Free",
+      "scheduledDateTime": "2023-05-12T11:00:00",
+      "venueLocation": "Children's Park",
+      "specializedServices": ["Pediatric Checkup", "Immunization Clinic"],
+      "healthcareProfessionals": ["Pediatrician Dr. Sarah Davis", "Nurse Jessica Taylor"],
+      "targetAudience": "Children and Parents"
+    },
+    {
+      "id": 4,
+      "campName": "Senior Health Expo",
+      "image": "https://i.ibb.co/bHgT716/SHWE-Main-Image-1.png",
+      "campFees": "$5",
+      "scheduledDateTime": "2023-06-08T09:30:00",
+      "venueLocation": "Senior Citizens Center",
+      "specializedServices": ["Geriatric Consultation", "Fall Risk Assessment"],
+      "healthcareProfessionals": ["Gerontologist Dr. James Anderson", "Nurse Olivia Miller"],
+      "targetAudience": "Seniors"
+    },
+    {
+      "id": 5,
+      "campName": "Women's Wellness Summit",
+      "image": "https://i.ibb.co/kKZnGv0/pngwing-com.png",
+      "campFees": "$12",
+      "scheduledDateTime": "2023-07-15T14:00:00",
+      "venueLocation": "Women's Community Center",
+      "specializedServices": ["Gynecological Checkup", "Women's Health Workshops"],
+      "healthcareProfessionals": ["OB-GYN Dr. Rachel White", "Nurse Sophia Clark"],
+      "targetAudience": "Women"
+    },
+    {
+      "id": 6,
+      "campName": "Mental Health Awareness Day",
+      "image": "https://i.ibb.co/sb0Qg9z/pngwing-com-1.png",
+      "campFees": "Free",
+      "scheduledDateTime": "2023-08-30T12:00:00",
+      "venueLocation": "City Park Amphitheater",
+      "specializedServices": ["Counseling Sessions", "Stress Management Workshops"],
+      "healthcareProfessionals": ["Psychiatrist Dr. Michael Lee", "Counselor Emma Adams"],
+      "targetAudience": "All Ages"
+    }
+  ]
+  

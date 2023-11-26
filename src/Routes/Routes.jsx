@@ -17,6 +17,7 @@ import SignUp from "../Pages/SignUp/SignUp";
         {
             path : '/' ,
             element : <Home></Home>
+           
         },
         {
             path : 'login',

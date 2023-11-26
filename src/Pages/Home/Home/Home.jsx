@@ -1,6 +1,16 @@
 import { Helmet } from "react-helmet-async";
+import Banner from "./Banner/Banner";
+import PopularCamp from "../PopularCamp/PopularCamp";
+// import { useLoaderData } from "react-router-dom";
 
 const Home = () => {
+
+
+    // const camps = useLoaderData();
+
+    // console.log(camps);
+
+
     return (
         <div>
 
@@ -8,7 +18,21 @@ const Home = () => {
                 <title> CampSwift | Home  </title>
 
             </Helmet>
-            <h2 className="text-3xl"> this is home</h2>
+            <Banner></Banner>
+            <PopularCamp></PopularCamp>
+
+
+            {/* <div>
+                {
+                    camps.map( camp =>{
+                        <PopularCamp key={camp.id}>
+
+                            camp ={camp}
+                            
+                             </PopularCamp>
+                    } )
+                }
+            </div> */}
         </div>
     );
 };
