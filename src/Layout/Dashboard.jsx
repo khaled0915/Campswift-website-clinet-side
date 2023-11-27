@@ -4,7 +4,7 @@ import { NavLink, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
 
-    const isAdmin  = true ;
+    const isOrganizer = true;
 
 
 
@@ -15,133 +15,147 @@ const Dashboard = () => {
                 <ul className="camp p-5">
 
                     {
-                        isAdmin ? <>
-                        
-                        <li>
+                        isOrganizer ? <>
+
+                            <li>
 
 
-                        <NavLink to='/dashboard/ organizer-profile'>
+                                <NavLink to='/dashboard/ organizer-profile'>
 
-                            <div className="flex bg-yellow-500 rounded-lg items-center justify-center gap-3">
-                            <FaUser></FaUser>
-
-
-                            organizer-profile
-  
-
-                            
-
- 
-
-                            </div>
-
-                           
-                             </NavLink>
-
-                    </li>
-
-                    <li>
-                        <NavLink to='/dashboard/add-a-camp'>
+                                    <div className="flex bg-yellow-500 rounded-lg items-center justify-center gap-3">
+                                        <FaUser></FaUser>
 
 
-                           <div className="flex items-center bg-blue-400 rounded-lg justify-center gap-3 mt-3">
-                           <FaRegBookmark></FaRegBookmark>
-                           add camps 
-                           </div>
-
-
-                             </NavLink>
-
-                    </li>
-
-
-                    <li>
-                        <NavLink to='/dashboard/manage-camps'>
-
-                            <div className="flex items-center bg-orange-300 rounded-lg justify-center gap-3 mt-3">
-                            <FaCampground></FaCampground>
-                            manage camps
-                            </div>
-
-                             </NavLink>
-
-                    </li>
-                    <li>
-                        <NavLink to='/dashboard/manage-registered-camps'>
-
-                         <div className="flex items-center bg-cyan-400 rounded-lg justify-center gap-3 mt-3">
-                         <FaAddressBook></FaAddressBook>
-                         manage registered camps
-                         </div>
-
-                             </NavLink>
-
-                    </li>
-                        
-                         </> 
-
-                         : 
-
-
-                         <> 
-                         <li>
-                        <NavLink to='/dashboard/participant-profile'>
-
-                            <div className="flex bg-yellow-500 rounded-lg items-center justify-center gap-3">
-                            <FaUser></FaUser>
-
-                            Participant_profile
+                                        organizer-profile
 
 
 
 
 
-                            </div>
 
-                           
-                             </NavLink>
-
-                    </li>
-
-                    <li>
-                        <NavLink to='/dashboard/registered-camps'>
+                                    </div>
 
 
-                           <div className="flex items-center bg-blue-400 rounded-lg justify-center gap-3 mt-3">
-                           <FaRegBookmark></FaRegBookmark>
-                            Registered camps 
-                           </div>
+                                </NavLink>
+
+                            </li>
+
+                            <li>
+                                <NavLink to='/dashboard/add-a-camp'>
 
 
-                             </NavLink>
+                                    <div className="flex items-center bg-blue-400 rounded-lg justify-center gap-3 mt-3">
+                                        <FaRegBookmark></FaRegBookmark>
+                                        add camps
+                                    </div>
 
-                    </li>
+
+                                </NavLink>
+
+                            </li>
+
+                            <li>
+                                <NavLink to='/dashboard/users'>
 
 
-                    <li>
-                        <NavLink to='/dashboard/payment-history'>
+                                    <div className="flex items-center bg-slate-400 rounded-lg justify-center gap-3 mt-3">
+                                        <FaUser></FaUser>
+                                        All users
+                                    </div>
 
-                            <div className="flex items-center bg-orange-300 rounded-lg justify-center gap-3 mt-3">
-                            <FaMoneyBill></FaMoneyBill>
-                            payment-history
-                            </div>
 
-                             </NavLink>
+                                </NavLink>
 
-                    </li>
-                    <li>
-                        <NavLink to='/dashboard/feedback-and-ratings'>
+                            </li>
 
-                         <div className="flex items-center bg-cyan-400 rounded-lg justify-center gap-3 mt-3">
-                         <FaReadme></FaReadme>
-                            feedback-and-ratings
-                         </div>
 
-                             </NavLink>
+                            <li>
+                                <NavLink to='/dashboard/manage-camps'>
 
-                    </li>
-                         
-                         </>
+                                    <div className="flex items-center bg-orange-300 rounded-lg justify-center gap-3 mt-3">
+                                        <FaCampground></FaCampground>
+                                        manage camps
+                                    </div>
+
+                                </NavLink>
+
+                            </li>
+                            <li>
+                                <NavLink to='/dashboard/manage-registered-camps'>
+
+                                    <div className="flex items-center bg-cyan-400 rounded-lg justify-center gap-3 mt-3">
+                                        <FaAddressBook></FaAddressBook>
+                                        manage registered camps
+                                    </div>
+
+                                </NavLink>
+
+                            </li>
+
+                        </>
+
+                            :
+
+
+                            <>
+                                <li>
+                                    <NavLink to='/dashboard/participant-profile'>
+
+                                        <div className="flex bg-yellow-500 rounded-lg items-center justify-center gap-3">
+                                            <FaUser></FaUser>
+
+                                            Participant_profile
+
+
+
+
+
+                                        </div>
+
+
+                                    </NavLink>
+
+                                </li>
+
+                                <li>
+                                    <NavLink to='/dashboard/registered-camps'>
+
+
+                                        <div className="flex items-center bg-blue-400 rounded-lg justify-center gap-3 mt-3">
+                                            <FaRegBookmark></FaRegBookmark>
+                                            Registered camps
+                                        </div>
+
+
+                                    </NavLink>
+
+                                </li>
+
+
+                                <li>
+                                    <NavLink to='/dashboard/payment-history'>
+
+                                        <div className="flex items-center bg-orange-300 rounded-lg justify-center gap-3 mt-3">
+                                            <FaMoneyBill></FaMoneyBill>
+                                            payment-history
+                                        </div>
+
+                                    </NavLink>
+
+                                </li>
+                                <li>
+                                    <NavLink to='/dashboard/feedback-and-ratings'>
+
+                                        <div className="flex items-center bg-cyan-400 rounded-lg justify-center gap-3 mt-3">
+                                            <FaReadme></FaReadme>
+                                            feedback-and-ratings
+                                        </div>
+
+                                    </NavLink>
+
+                                </li>
+
+                            </>
                     }
 
 
@@ -152,24 +166,24 @@ const Dashboard = () => {
                     <li>
                         <NavLink to='/'>
 
-                         <div className="flex items-center bg-cyan-400 rounded-lg justify-center gap-3 mt-3">
-                         <FaHome></FaHome>
-                            Home
-                         </div>
+                            <div className="flex items-center bg-cyan-400 rounded-lg justify-center gap-3 mt-3">
+                                <FaHome></FaHome>
+                                Home
+                            </div>
 
-                             </NavLink>
+                        </NavLink>
 
                     </li>
 
                     <li>
                         <NavLink to='/availableCamps'>
 
-                         <div className="flex items-center bg-cyan-400 rounded-lg justify-center gap-3 mt-3">
-                         <FaCampground></FaCampground>
-                            Available Camps
-                         </div>
+                            <div className="flex items-center bg-cyan-400 rounded-lg justify-center gap-3 mt-3">
+                                <FaCampground></FaCampground>
+                                Available Camps
+                            </div>
 
-                             </NavLink>
+                        </NavLink>
 
                     </li>
                 </ul>
@@ -183,7 +197,7 @@ const Dashboard = () => {
             </div>
 
 
-            
+
         </div>
     );
 };

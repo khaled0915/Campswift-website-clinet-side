@@ -12,6 +12,7 @@ import Dashboard from "../Layout/Dashboard";
 import UserProfile from "../Pages/Dashboard/UserProfile/UserProfile";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 
 
 
@@ -57,6 +58,12 @@ children : [
     path : 'participant-profile',
     
     element : <UserProfile></UserProfile>
+
+  },
+  // organizer routes 
+  {
+    path : 'users',
+    element : <AllUsers></AllUsers> 
 
   }
 ]
