@@ -13,6 +13,8 @@ import UserProfile from "../Pages/Dashboard/UserProfile/UserProfile";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
+import AddCamp from "../Pages/Dashboard/AddCamp/AddCamp";
+import OrganizerRoute from "./OrganizerRoute";
 
 
 
@@ -55,6 +57,7 @@ element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
 errorElement : <ErrorPage></ErrorPage>,
 children : [
   {
+    // participant
     path : 'participant-profile',
     
     element : <UserProfile></UserProfile>
@@ -63,8 +66,12 @@ children : [
   // organizer routes 
   {
     path : 'users',
-    element : <AllUsers></AllUsers> 
+    element : <OrganizerRoute> <AllUsers></AllUsers>  </OrganizerRoute>
 
+  },
+  {
+    path : 'add-a-camp',
+    element : <OrganizerRoute> <AddCamp></AddCamp> </OrganizerRoute> 
   }
 ]
 

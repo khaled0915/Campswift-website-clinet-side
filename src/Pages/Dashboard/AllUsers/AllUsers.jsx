@@ -94,7 +94,7 @@ const AllUsers = () => {
         <div>
 
 <Helmet>
-                <title> CampSwift | All users  </title>
+                <title> Dashboard | All users  </title>
 
             </Helmet>
             <div className="flex justify-evenly my-4">
