@@ -2,6 +2,8 @@ import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { FaCampground } from "react-icons/fa";
 import useAxiosPublic from "../../../hooks/useAxiosPublic";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import Swal from "sweetalert2";
 
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY ;
 
@@ -9,9 +11,11 @@ const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY ;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
 const AddCamp = () => {
 
-    const { register, handleSubmit } = useForm()
+    const { register, handleSubmit , reset } = useForm()
 
     const axiosPublic = useAxiosPublic();
+
+    const axiosSecure = useAxiosSecure();
 
 
     const onSubmit = async (data) => {
@@ -25,6 +29,46 @@ const AddCamp = () => {
             }
         } );
         console.log(res.data);
+
+        if(res.data.success){
+
+            const campData = {
+                campName : data.campName ,
+                image : res.data.data.display_url,
+                campFees :  parseFloat(data.campFees) ,
+                healthcareProfessionals : data.healthcareProfessionals ,
+                specializedServices : data.specializedServices ,
+
+                targetAudience :data.targetAudience ,
+
+                venueLocation : data.venueLocation ,
+
+                purposeBenefits:data.purposeBenefits ,
+
+                scheduledDateTime:data.scheduledDateTime
+
+
+            }
+
+
+            const campRes = await axiosSecure.post('/camp' , campData)
+            console.log(campRes.data);
+            if(campRes.data.insertedId){
+                reset()
+
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: `${data.name} is added to the menu`,
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
+
+            }
+
+
+
+        }
 
 
 
