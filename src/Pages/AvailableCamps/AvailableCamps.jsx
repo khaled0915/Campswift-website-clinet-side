@@ -1,5 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import useCamp from "../../hooks/useCamp";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
+import { Link } from "react-router-dom";
 
 
 const AvailableCamps = () => {
@@ -7,8 +9,10 @@ const AvailableCamps = () => {
 
     const [camp , refetch ] = useCamp();
 
+    const axiosPublic = useAxiosPublic();
 
-    console.log( 'in the available camps' ,camps);
+
+    console.log( 'in the available camps' ,camp);
 
     return (
         <div>
@@ -16,6 +20,8 @@ const AvailableCamps = () => {
                 <title> CampSwift | Available Camps  </title>
 
             </Helmet>
+
+
             <div className="overflow-x-auto">
   <table className="table">
     {/* head */}
@@ -26,45 +32,102 @@ const AvailableCamps = () => {
 
 
         <th>
+          #
           
         </th>
-        <th>Name</th>
-        <th>Job</th>
-        <th>Favorite Color</th>
-        <th></th>
+        <th> Camp Name</th>
+        <th>Image </th>
+        <th> Date  </th>
+        <th > Venue  </th>
+        <th > Service Provide  </th>
+        <th > HealthCare Professionals   </th>
+        <th > Target Audience   </th>
       </tr>
     </thead>
     <tbody>
-      {/* row 1 */}
-      <tr>
+
+
+      {
+        camp.map( (item, index) =>   <tr key={item._id}>
         <th>
-          <label>
-            <input type="checkbox" className="checkbox" />
-          </label>
+        {index+1}
         </th>
+
+        <td>
+          {item.campName}
+        </td>
+
         <td>
           <div className="flex items-center gap-3">
             <div className="avatar">
               <div className="mask mask-squircle w-12 h-12">
-                <img src="/tailwind-css-component-profile-2@56w.png" alt="Avatar Tailwind CSS Component" />
+                <img src={item.image} alt="Avatar Tailwind CSS Component" />
               </div>
             </div>
-            <div>
-              <div className="font-bold">Hart Hagerty</div>
-              <div className="text-sm opacity-50">United States</div>
-            </div>
+            
           </div>
         </td>
         <td>
-          Zemlak, Daniel and Leannon
-          <br/>
-          <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
+          {item.scheduledDateTime}
         </td>
-        <td>Purple</td>
+        <td>
+          {item.venueLocation
+}
+        </td>
+        <td>
+
+          <td>
+            <li>
+            {item.specializedServices[0]}
+
+            </li>
+            <li>
+            {item.specializedServices[1]}
+
+            </li>
+            
+          </td>
+
+       
+        </td>
+
+
+        <td>
+          <li>
+          {item.healthcareProfessionals[0]}
+
+          </li>
+          <li>
+          {item.healthcareProfessionals[1]}
+
+          </li>
+
+         
+        </td>
+        <td>
+          {item.targetAudience}
+        </td>
+
+        
         <th>
-          <button className="btn btn-ghost btn-xs">details</button>
+
+
+        <Link to={`/camp/camp-details/${item._id}`} > 
+            
+            <button 
+
+             
+className="btn btn-outline btn-success mt-5 "> Details  </button>
+             </Link>
+
+
+          
+
+
         </th>
-      </tr>
+      </tr> )
+      }
+    
      
      
       
