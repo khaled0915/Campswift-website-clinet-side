@@ -3,14 +3,17 @@ import { Helmet } from "react-helmet";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { useForm } from "react-hook-form";
-import { Result } from "postcss";
+
 import Swal from "sweetalert2";
 import SocialLogin from "../../Components/SocialLogin/SocialLogin";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 
 
 
 const SignUp = () => {
+
+  const axiosPublic = useAxiosPublic();
 
     const navigate = useNavigate();
 
@@ -37,16 +40,37 @@ const SignUp = () => {
             console.log(loggedUser);
             updateUserProfile(data.name , data.photoURL)
             .then(() =>{
-                console.log('user profile updated');
-                reset();
-                Swal.fire({
-                    position: "top-end",
-                    icon: "success",
-                    title: "user created successfully",
-                    showConfirmButton: false,
-                    timer: 1500
-                  });
-                  navigate('/')
+
+              const userInfo = {
+                name : data.name ,
+                email : data.email 
+              }
+
+              // create user entry in the database
+
+              axiosPublic.post('/users' , userInfo)
+              .then(res =>{
+                if(res.data.insertedId){
+
+                  console.log('user added in the db');
+
+
+                  reset();
+                  Swal.fire({
+                      position: "top-end",
+                      icon: "success",
+                      title: "user created successfully",
+                      showConfirmButton: false,
+                      timer: 1500
+                    });
+                    navigate('/')
+                  
+                }
+              })
+
+
+                // console.log('user profile updated');
+               
 
             })
             .catch(error => console.log(error))

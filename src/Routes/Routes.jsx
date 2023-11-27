@@ -10,6 +10,8 @@ import CampDetails from "../Pages/CampDetails/CampDetails";
 import AvailableCamps from "../Pages/AvailableCamps/AvailableCamps";
 import Dashboard from "../Layout/Dashboard";
 import UserProfile from "../Pages/Dashboard/UserProfile/UserProfile";
+import PrivateRoute from "./PrivateRoute";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 
 
@@ -17,6 +19,7 @@ import UserProfile from "../Pages/Dashboard/UserProfile/UserProfile";
     {
       path: "/",
       element: <Main></Main>,
+      errorElement: <ErrorPage></ErrorPage> ,
       children : [
         {
             path : '/' ,
@@ -47,7 +50,8 @@ import UserProfile from "../Pages/Dashboard/UserProfile/UserProfile";
 
     {
 path : 'dashboard',
-element: <Dashboard></Dashboard>,
+element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+errorElement : <ErrorPage></ErrorPage>,
 children : [
   {
     path : 'participant-profile',
