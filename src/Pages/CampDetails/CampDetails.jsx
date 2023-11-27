@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 
 import useCamp from "../../hooks/useCamp";
 import { Helmet } from "react-helmet-async";
@@ -130,11 +130,23 @@ className="btn mt-10  btn-outline btn-primary mx-auto"
 
     </div>
 
+   
+
   </div>
 </dialog>
+
+<Link to='/availableCamps'> 
+
+<button className="btn ml-10  mx-auto btn-outline font-bold md:btn-wide btn-accent"> See All  </button>
+ </Link>
+
+
           </div>
+          
         </div>
+        
       </div>
+      
     </div>
   );
 };

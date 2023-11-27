@@ -8,6 +8,8 @@ import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import CampDetails from "../Pages/CampDetails/CampDetails";
 import AvailableCamps from "../Pages/AvailableCamps/AvailableCamps";
+import Dashboard from "../Layout/Dashboard";
+import UserProfile from "../Pages/Dashboard/UserProfile/UserProfile";
 
 
 
@@ -41,4 +43,19 @@ import AvailableCamps from "../Pages/AvailableCamps/AvailableCamps";
         }
       ]
     },
+
+
+    {
+path : 'dashboard',
+element: <Dashboard></Dashboard>,
+children : [
+  {
+    path : 'participant-profile',
+    
+    element : <UserProfile></UserProfile>
+
+  }
+]
+
+    }
   ]);
