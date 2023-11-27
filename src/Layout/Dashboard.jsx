@@ -1,10 +1,11 @@
 import { FaAddressBook, FaCampground, FaHome, FaMoneyBill, FaReadme, FaRegBookmark, FaUser } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
+import useOrganizer from "../hooks/useOrganizer";
 
 
 const Dashboard = () => {
 
-    const isOrganizer = true;
+    const [isOrganizer] = useOrganizer() ;
 
 
 
