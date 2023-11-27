@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
-import CampDetailsPage from "./CampDetailsPage";
+
 import useCamp from "../../hooks/useCamp";
 import { Helmet } from "react-helmet-async";
 

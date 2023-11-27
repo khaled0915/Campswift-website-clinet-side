@@ -6,12 +6,12 @@ const PopularCamp = () => {
 
 
 
-    const [camps] = useCamp();
+    const [camp] = useCamp();
 
-    const popularCamp = camps.filter( item => item.category ===  'popular' )
+    const popularCamp = camp.filter( item => item.category ===  'popular' )
 
    
-    console.log(camps);
+    console.log(camp);
     console.log(popularCamp);
 
 

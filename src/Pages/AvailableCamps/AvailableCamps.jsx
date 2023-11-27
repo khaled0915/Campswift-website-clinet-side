@@ -5,7 +5,7 @@ import useCamp from "../../hooks/useCamp";
 const AvailableCamps = () => {
 
 
-    const [camps] = useCamp();
+    const [camp , refetch ] = useCamp();
 
 
     console.log( 'in the available camps' ,camps);
