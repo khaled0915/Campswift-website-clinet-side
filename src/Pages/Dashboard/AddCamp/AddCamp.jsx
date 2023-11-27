@@ -1,12 +1,35 @@
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { FaCampground } from "react-icons/fa";
+import useAxiosPublic from "../../../hooks/useAxiosPublic";
+
+const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY ;
 
 
+const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
 const AddCamp = () => {
 
     const { register, handleSubmit } = useForm()
-    const onSubmit = (data) => {
+
+    const axiosPublic = useAxiosPublic();
+
+
+    const onSubmit = async (data) => {
+
+
+        const imageFile = {image : data.image[0]}
+
+        const res = await axiosPublic.post(image_hosting_api ,  imageFile ,{
+            headers : {
+                'content-type' : 'multipart/form-data'
+            }
+        } );
+        console.log(res.data);
+
+
+
+
+
 
 
 
