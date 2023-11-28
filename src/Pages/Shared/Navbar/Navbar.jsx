@@ -37,7 +37,7 @@ const Navbar = () => {
             <li>
 
                 
-                 <Link to='/dashboard/participant-profile'>
+                 <Link to='/dashboard'>
 
 
                  Dashboard 

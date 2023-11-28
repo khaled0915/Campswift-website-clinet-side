@@ -15,6 +15,7 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 import AddCamp from "../Pages/Dashboard/AddCamp/AddCamp";
 import OrganizerRoute from "./OrganizerRoute";
+import ManageCamp from "../Pages/Dashboard/ManageCamp/ManageCamp";
 
 
 
@@ -72,6 +73,11 @@ children : [
   {
     path : 'add-a-camp',
     element : <OrganizerRoute> <AddCamp></AddCamp> </OrganizerRoute> 
+  },
+  {
+    path : 'manage-camps' ,
+    element : <OrganizerRoute> <ManageCamp></ManageCamp> </OrganizerRoute>
+     
   }
 ]
 
