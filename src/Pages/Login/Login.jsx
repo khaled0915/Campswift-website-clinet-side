@@ -59,6 +59,14 @@ const Login = () => {
 
             
         })
+        .catch( error =>{
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "invalid login , please try again!",
+
+          });
+        })
     }
     return (
 

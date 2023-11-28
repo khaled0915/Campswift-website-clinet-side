@@ -92,6 +92,7 @@ const AddCamp = () => {
             <h3 className="text-center font-bold text-3xl underline mb-10 text-yellow-600"> Add a camp  </h3>
 
             <div>
+                
             <form onSubmit={handleSubmit(onSubmit)}>
      
 

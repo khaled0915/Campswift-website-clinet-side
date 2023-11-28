@@ -3,29 +3,121 @@ import { Link, useLoaderData, useParams } from "react-router-dom";
 
 import useCamp from "../../hooks/useCamp";
 import { Helmet } from "react-helmet-async";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
+import Swal from "sweetalert2";
+import useAuth from "../../hooks/useAuth";
+import useOrganizer from "../../hooks/useOrganizer";
 
 
 const CampDetails = () => {
 
+  const [isOrganizer] = useOrganizer() ;
+
+
+  const  {user} = useAuth();
+
+
+  console.log(' current user in the site'  ,user);
+
+  const [camp] = useCamp();
+
+  console.log(camp);
+
+
+  const axiosPublic = useAxiosPublic();
 
 
     const handleJoinCamp = event =>{
+
+      if(user && user.email)
+
+      {
+
+
         event.preventDefault();
         const form  = event.target;
         
-        const email = form.email.value ;
+        const name = form.name.value ;
 
-        const password = form.password.value ; 
+        const age = form.age.value ;
+        
+        const phone = form.phone.value ;
+        const address = form.address.value ;
+        const emergency_contact = form.emergency_contact.value ;
+        const gender = form.gender.value ;
 
-        console.log(email , password);
+        // const gender = form.gender.value;
+
+        const participantInfo = {
+
+          campId : filteredCamp._id ,
+          email : user.email ,
+
+
+          campName : filteredCamp.campName ,
+
+          campFees : filteredCamp.campFees,
+
+          image : filteredCamp.image ,
+          specializedServices : filteredCamp.specializedServices,
+
+          targetAudience :filteredCamp.targetAudience ,
+
+          venueLocation : filteredCamp.venueLocation ,
+          purposeBenefits : filteredCamp.purposeBenefits ,
+          scheduledDateTime : filteredCamp.scheduledDateTime,
+          healthcareProfessionals : filteredCamp.healthcareProfessionals ,
+
+          participantName : name ,
+          participantAge : age ,
+          participantPhone : phone ,
+          participantEmergency_contact : emergency_contact ,
+          participantAddress : address ,
+          participantGender : gender 
+        }
+
+        axiosPublic.post('/participant' , participantInfo)
+        .then( res =>{
+          if(res.data.insertedId){
+            console.log('info added');
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "info saved successfully",
+              showConfirmButton: false,
+              timer: 1500
+            });
+
+          }
+        } )
+
+        console.log(participantInfo );
+
+
+      }
+
+
+        
+        
+
+
+
+
+       
+
+
+
+
+      
 
        
     }
 
+     
 
 
-    const [camp] = useCamp();
-  console.log(camp);
+
+   
 
   const { id } = useParams();
   console.log(id);
@@ -77,12 +169,28 @@ const CampDetails = () => {
             
 
             {/* Open the modal using document.getElementById('ID').showModal() method */}
-<button 
+
+            {
+              isOrganizer ? 
+
+
+              <button className="btn btn-accent hidden ">
+                
+                Organizer 
+                 </button>
+
+              
+
+  :
+
+  <button 
 
 
 className="btn mt-10  btn-outline btn-primary mx-auto"
  onClick={()=>document.getElementById('my_modal_5').showModal()}>  Join Camp 
   </button>
+            }
+
 
 <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
 
@@ -107,20 +215,64 @@ className="btn mt-10  btn-outline btn-primary mx-auto"
           <label className="label">
             <span className="label-text"> Phone </span>
           </label>
-          <input type="number" name='phone' placeholder="phone" className="input input-bordered" required />
+          <input type="text" name='phone' placeholder="phone" className="input input-bordered" required />
 
           
         </div>
+
+
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text"> Address </span>
+          </label>
+          <input type="text" name='address' placeholder="address" className="input input-bordered" required />
+
+          
+        </div>
+
+
+        <select name='gender' className="select select-accent w-full max-w-xs">
+  <option  disabled selected> Select Your Gender </option>
+  
+  <option> Male </option>
+  <option> Female </option>
+</select>
+
+
+
+
+
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text"> Emergency Contact </span>
+          </label>
+          <input type="text" name='emergency_contact' placeholder="Emergency Contact" className="input input-bordered" required />
+
+          
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
         <div className="form-control mt-6">
 
           
 
-          <input type="submit" value='Login' className="btn btn-secondary btn-outline" />
+          <input  type="submit" value='Join' className="btn btn-secondary btn-outline" />
         </div>
+
+
       </form>
 
 
-    <h3 className="font-bold text-lg">Hello!</h3>
     <p className="py-4">Press ESC key or click the button below to close</p>
     <div className="modal-action">
       <form method="dialog">

@@ -16,6 +16,8 @@ import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 import AddCamp from "../Pages/Dashboard/AddCamp/AddCamp";
 import OrganizerRoute from "./OrganizerRoute";
 import ManageCamp from "../Pages/Dashboard/ManageCamp/ManageCamp";
+import ManageRegCamp from "../Pages/Dashboard/ManageRegCamp/ManageRegCamp";
+
 
 
 
@@ -41,7 +43,7 @@ import ManageCamp from "../Pages/Dashboard/ManageCamp/ManageCamp";
         },
         {
             path : '/camp/camp-details/:id',
-            element : <CampDetails ></CampDetails>,
+            element : <PrivateRoute> <CampDetails ></CampDetails>  </PrivateRoute>,
             loader : ({params}) => fetch(`http://localhost:5000/camp/camp-details/${params.id}`)
         },
         {
@@ -78,7 +80,12 @@ children : [
     path : 'manage-camps' ,
     element : <OrganizerRoute> <ManageCamp></ManageCamp> </OrganizerRoute>
      
+  },
+  {
+    path : 'manage-registered-camps' ,
+    element : <OrganizerRoute> <ManageRegCamp></ManageRegCamp> </OrganizerRoute>
   }
+ 
 ]
 
     }

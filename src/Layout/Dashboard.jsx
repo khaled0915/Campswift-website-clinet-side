@@ -1,6 +1,7 @@
 import { FaAddressBook, FaCampground, FaHome, FaMoneyBill, FaReadme, FaRegBookmark, FaUser } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
 import useOrganizer from "../hooks/useOrganizer";
+import { Helmet } from "react-helmet-async";
 
 
 const Dashboard = () => {
@@ -11,6 +12,11 @@ const Dashboard = () => {
 
     return (
         <div className="flex">
+
+<Helmet>
+                <title> Dashboard  </title>
+
+            </Helmet>
 
             <div className="w-64 min-h-screen  bg-red-500">
                 <ul className="camp p-5">

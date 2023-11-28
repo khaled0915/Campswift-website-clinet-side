@@ -4,24 +4,6 @@ import useAxiosPublic from "./useAxiosPublic";
 
 const useCamp = () => {
 
-    // const [ camps , setCamp ] = useState([]);
-
-    // const [loading , setLoading]  = useState(true);
-
-    // useEffect( ()=>{
-
-
-    //     fetch('http://localhost:5000/camp')
-    //     .then(res => res.json())
-    //     .then(data =>{
-    //         setCamp(data);
-    //         setLoading(false);
-    //     })
-
-
-
-    // } , [])
-
 
     // using tanstack 
 
