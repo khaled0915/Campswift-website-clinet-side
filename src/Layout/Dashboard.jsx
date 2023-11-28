@@ -27,7 +27,7 @@ const Dashboard = () => {
                             <li>
 
 
-                                <NavLink to='/dashboard/ organizer-profile'>
+                                <NavLink to='/dashboard/organizer-profile'>
 
                                     <div className="flex bg-yellow-500 rounded-lg items-center justify-center gap-3">
                                         <FaUser></FaUser>

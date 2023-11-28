@@ -1,4 +1,6 @@
+import { FaUserAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import useParticipant from "../../../hooks/useParticipant";
 
 
 const CampCard = ({camp}) => {
@@ -11,6 +13,9 @@ const CampCard = ({camp}) => {
         venueLocation ,campFees
     } 
     = camp ;
+
+
+    const [participant] = useParticipant()
 
     return (
         <div>
@@ -70,6 +75,16 @@ const CampCard = ({camp}) => {
              
 className="btn btn-outline btn-success mt-5 "> Details  </button>
              </Link>
+
+             <div>
+
+               
+               
+                 
+             </div>
+
+
+
 
 
 

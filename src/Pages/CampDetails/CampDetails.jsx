@@ -3,10 +3,11 @@ import { Link, useLoaderData, useParams } from "react-router-dom";
 
 import useCamp from "../../hooks/useCamp";
 import { Helmet } from "react-helmet-async";
-import useAxiosPublic from "../../hooks/useAxiosPublic";
+
 import Swal from "sweetalert2";
 import useAuth from "../../hooks/useAuth";
 import useOrganizer from "../../hooks/useOrganizer";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 
 const CampDetails = () => {
@@ -17,17 +18,21 @@ const CampDetails = () => {
   const  {user} = useAuth();
 
 
-  console.log(' current user in the site'  ,user);
+  // console.log(' current user in the site'  ,user);
 
-  const [camp] = useCamp();
+  const [camp ,  , refetch] = useCamp();
 
-  console.log(camp);
+  // console.log(camp);
 
 
-  const axiosPublic = useAxiosPublic();
+
+
+  const axiosSecure = useAxiosSecure();
 
 
     const handleJoinCamp = event =>{
+
+      console.log(user.email);
 
       if(user && user.email)
 
@@ -76,22 +81,24 @@ const CampDetails = () => {
           participantGender : gender 
         }
 
-        axiosPublic.post('/participant' , participantInfo)
+        axiosSecure.post('/participant' , participantInfo)
         .then( res =>{
           if(res.data.insertedId){
             console.log('info added');
             Swal.fire({
               position: "top-end",
               icon: "success",
-              title: "info saved successfully",
+              title: ' info saved successfully ',
               showConfirmButton: false,
               timer: 1500
             });
+            refetch();
+            
 
           }
         } )
 
-        console.log(participantInfo );
+        // console.log(participantInfo );
 
 
       }
@@ -232,7 +239,7 @@ className="btn mt-10  btn-outline btn-primary mx-auto"
 
 
         <select name='gender' className="select select-accent w-full max-w-xs">
-  <option  disabled selected> Select Your Gender </option>
+  <option  defaultValue='disabled' selected> Select Your Gender </option>
   
   <option> Male </option>
   <option> Female </option>

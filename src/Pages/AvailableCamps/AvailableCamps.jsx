@@ -2,12 +2,16 @@ import { Helmet } from "react-helmet-async";
 import useCamp from "../../hooks/useCamp";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import { Link } from "react-router-dom";
+import { FaUserAlt } from "react-icons/fa";
+import useParticipant from "../../hooks/useParticipant";
 
 
 const AvailableCamps = () => {
 
 
     const [camp , refetch ] = useCamp();
+
+    const [participant] = useParticipant()
 
     const axiosPublic = useAxiosPublic();
 
@@ -42,6 +46,8 @@ const AvailableCamps = () => {
         <th > Service Provide  </th>
         <th > HealthCare Professionals   </th>
         <th > Target Audience   </th>
+        <th> action </th>
+        <th> participant Count </th>
       </tr>
     </thead>
     <tbody>
@@ -125,6 +131,13 @@ className="btn btn-outline btn-success mt-5 "> Details  </button>
 
 
         </th>
+
+
+        <th>
+        <button className="btn btn-active mt-5">
+                <FaUserAlt></FaUserAlt>
+                 +{  participant.length}
+                     </button> </th>
       </tr> )
       }
     

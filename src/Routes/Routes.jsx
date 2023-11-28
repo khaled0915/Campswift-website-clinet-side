@@ -17,6 +17,8 @@ import AddCamp from "../Pages/Dashboard/AddCamp/AddCamp";
 import OrganizerRoute from "./OrganizerRoute";
 import ManageCamp from "../Pages/Dashboard/ManageCamp/ManageCamp";
 import ManageRegCamp from "../Pages/Dashboard/ManageRegCamp/ManageRegCamp";
+import RegisteredCamp from "../Pages/Dashboard/RegisteredCamp/RegisteredCamp";
+import OrganizerProfile from "../Pages/Dashboard/OrganizerProfile/OrganizerProfile";
 
 
 
@@ -66,11 +68,19 @@ children : [
     element : <UserProfile></UserProfile>
 
   },
+  {
+    path : 'registered-camps',
+    element : <RegisteredCamp></RegisteredCamp>
+  },
   // organizer routes 
   {
     path : 'users',
     element : <OrganizerRoute> <AllUsers></AllUsers>  </OrganizerRoute>
 
+  },
+  {
+    path : 'organizer-profile',
+    element : <OrganizerRoute><OrganizerProfile></OrganizerProfile></OrganizerRoute>
   },
   {
     path : 'add-a-camp',
