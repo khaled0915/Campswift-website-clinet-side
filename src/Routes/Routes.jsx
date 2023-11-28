@@ -19,6 +19,7 @@ import ManageCamp from "../Pages/Dashboard/ManageCamp/ManageCamp";
 import ManageRegCamp from "../Pages/Dashboard/ManageRegCamp/ManageRegCamp";
 import RegisteredCamp from "../Pages/Dashboard/RegisteredCamp/RegisteredCamp";
 import OrganizerProfile from "../Pages/Dashboard/OrganizerProfile/OrganizerProfile";
+import Payment from "../Pages/Dashboard/Payment/Payment";
 
 
 
@@ -72,6 +73,14 @@ children : [
     path : 'registered-camps',
     element : <RegisteredCamp></RegisteredCamp>
   },
+
+  {
+    path : 'payment',
+    element : <Payment></Payment>
+  },
+
+
+
   // organizer routes 
   {
     path : 'users',

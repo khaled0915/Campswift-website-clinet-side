@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import useParticipant from "../../../hooks/useParticipant";
 import { FaTrash, FaUser } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 
 const RegisteredCamp = () => {
@@ -29,7 +30,28 @@ const RegisteredCamp = () => {
 
             </Helmet>
             <h3 className="text-3xl text-center mb-10 underline p-3  text-lime-700 font-bold"> This is registered camp </h3>
+{
+    participant.length ? 
 
+    <Link to='/dashboard/payment'>
+
+<button 
+
+
+className="btn p-5 m-5 btn-wide btn-outline btn-success font-bold">
+     Pay </button>
+
+ </Link>
+ :
+ <button
+ 
+ disabled
+ className="btn"> 
+
+
+    
+     </button>
+}
             <div className="overflow-x-auto">
   <table className="table table-zebra w-full" >
     {/* head */}
@@ -43,6 +65,7 @@ const RegisteredCamp = () => {
         <th> Payment Status  </th>
         <th> Confirmation Status   </th>
         <th> Action   </th>
+        
       </tr>
     </thead>
     <tbody>
