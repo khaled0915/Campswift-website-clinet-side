@@ -1,11 +1,55 @@
-import { Link } from "react-router-dom";
+
 import useCamp from "../../../hooks/useCamp";
-import { FaPushed, FaTrashAlt, FaUpload } from "react-icons/fa";
+
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import Swal from "sweetalert2";
 
 
 const ManageCamp = () => {
 
-    const [camp] = useCamp();
+    const [camp , refetch] = useCamp();
+    const axiosSecure  = useAxiosSecure();
+
+
+    const handleDeleteCamp =  (item) =>{
+
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+          }).then( async (result) => {
+            if (result.isConfirmed) {
+
+                const res = await axiosSecure.delete(`/delete-camp/${item._id}`)
+                // console.log(res.data);
+                if(res.data.deletedCount > 0){
+                    // refetch to update the ui
+                    refetch();
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: `${item.name} has been deleted`,
+                        showConfirmButton: false,
+                        timer: 1500
+                      });
+                     
+                }
+
+
+
+
+
+           
+            }
+          });
+
+
+
+    }
 
 
 
@@ -48,26 +92,22 @@ const ManageCamp = () => {
         </td>
 
         <td>
-          {/* <div className="flex items-center gap-3">
-            <div className="avatar">
-              <div className="mask mask-squircle w-12 h-12">
-                <img src={item.image} alt="Avatar Tailwind CSS Component" />
-              </div>
-            </div>
-            
-          </div> */}
+         
           {item.purposeBenefits}
         </td>
+
         <td>
           {item.scheduledDateTime}
         </td>
+        
         <td>
           {item.venueLocation
 }
         </td>
+
         <td>
 
-          <td>
+          
             <li>
             {item.specializedServices[0]}
 
@@ -77,7 +117,7 @@ const ManageCamp = () => {
 
             </li>
             
-          </td>
+          
 
        
         </td>
@@ -106,6 +146,8 @@ const ManageCamp = () => {
         
             
             <button 
+
+            onClick={ () => handleDeleteCamp(item) }
 
              
 className="btn btn-outline text-red-700 btn-danger mt-5 ">
