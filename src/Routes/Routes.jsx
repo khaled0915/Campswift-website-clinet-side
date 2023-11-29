@@ -21,6 +21,7 @@ import RegisteredCamp from "../Pages/Dashboard/RegisteredCamp/RegisteredCamp";
 import OrganizerProfile from "../Pages/Dashboard/OrganizerProfile/OrganizerProfile";
 import Payment from "../Pages/Dashboard/Payment/Payment";
 import UpdateCampInfo from "../Pages/Dashboard/UpdateCampInfo/UpdateCampInfo";
+import ContactUs from "../Pages/ContactUs/ContactUs";
 
 
 
@@ -41,6 +42,12 @@ import UpdateCampInfo from "../Pages/Dashboard/UpdateCampInfo/UpdateCampInfo";
             element : <Login> </Login>
         },
         {
+
+          path : '/contactUs' ,
+          element : <ContactUs></ContactUs>
+
+        },
+        {
             path : 'signUp',
 
             element : <SignUp></SignUp>
@@ -52,7 +59,7 @@ import UpdateCampInfo from "../Pages/Dashboard/UpdateCampInfo/UpdateCampInfo";
         },
         {
             path : '/availableCamps',
-            element : <AvailableCamps></AvailableCamps>
+            element : <PrivateRoute> <AvailableCamps></AvailableCamps> </PrivateRoute>
         }
       ]
     },
