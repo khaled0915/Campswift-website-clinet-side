@@ -10,9 +10,9 @@ const useCamp = () => {
     const axiosPublic = useAxiosPublic();
 
     const { data : camp = [] , isPending : loading , refetch } = useQuery({
-        queryKey : ['camp'] ,
+        queryKey : ['camps'] ,
         queryFn : async () =>{
-            const res  = await axiosPublic.get('/camp')
+            const res  = await axiosPublic.get('/camps')
             return res.data; 
         }
     })

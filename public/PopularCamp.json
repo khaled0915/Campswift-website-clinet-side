@@ -1,9 +1,9 @@
 [
   {
-    "id": 1,
+    "_id": "642c155b2c4774f05c36ee94",
     "campName": "Healthy Living Expo",
     "image": "https://i.ibb.co/yFVTy1c/5071654.jpg",
-    "campFees": "$10 (Free for children under 12)",
+    "campFees": 10,
     "scheduledDateTime": "2023-03-15T09:00:00",
     "venueLocation": "City Convention Center",
     "specializedServices": ["General Health Checkup", "Nutrition Consultation"],
@@ -13,10 +13,10 @@
     "category": "popular"
   },
   {
-    "id": 2,
+    "_id": "642c155b2c4774f05c36ee95",
     "campName": "Heart Health Symposium",
     "image": "https://i.ibb.co/RC5C4Pz/Pngtree-stethoscope-heart-health-medical-6778533.png",
-    "campFees": "$15",
+    "campFees": 15,
     "scheduledDateTime": "2023-04-20T10:30:00",
     "venueLocation": "Community Hall",
     "specializedServices": ["Cardiac Screening", "Blood Pressure Monitoring"],
@@ -26,10 +26,10 @@
     "category": "popular"
   },
   {
-    "id": 3,
+    "_id": "642c155b2c4774f05c36ee96",
     "campName": "Pediatric Wellness Fair",
     "image": "https://i.ibb.co/6Fzph8f/pngegg.png",
-    "campFees": "Free",
+    "campFees": 32,
     "scheduledDateTime": "2023-05-12T11:00:00",
     "venueLocation": "Children's Park",
     "specializedServices": ["Pediatric Checkup", "Immunization Clinic"],
@@ -39,10 +39,10 @@
     "category": "popular"
   },
   {
-    "id": 4,
+    "_id": "642c155b2c4774f05c36ee97",
     "campName": "Senior Health Expo",
     "image": "https://i.ibb.co/bHgT716/SHWE-Main-Image-1.png",
-    "campFees": "$5",
+    "campFees": 35,
     "scheduledDateTime": "2023-06-08T09:30:00",
     "venueLocation": "Senior Citizens Center",
     "specializedServices": ["Geriatric Consultation", "Fall Risk Assessment"],
@@ -52,10 +52,10 @@
     "category": "popular"
   },
   {
-    "id": 5,
+    "_id": "642c155b2c4774f05c36ee98",
     "campName": "Women's Wellness Summit",
     "image": "https://i.ibb.co/kKZnGv0/pngwing-com.png",
-    "campFees": "$12",
+    "campFees": 12,
     "scheduledDateTime": "2023-07-15T14:00:00",
     "venueLocation": "Women's Community Center",
     "specializedServices": ["Gynecological Checkup", "Women's Health Workshops"],
@@ -65,10 +65,10 @@
     "category": "popular"
   },
   {
-    "id": 6,
+    "_id": "642c155b2c4774f05c36ee99",
     "campName": "Mental Health Awareness Day",
     "image": "https://i.ibb.co/sb0Qg9z/pngwing-com-1.png",
-    "campFees": "Free",
+    "campFees": 45,
     "scheduledDateTime": "2023-08-30T12:00:00",
     "venueLocation": "City Park Amphitheater",
     "specializedServices": ["Counseling Sessions", "Stress Management Workshops"],
@@ -78,10 +78,10 @@
     "category": "popular"
   },
   {
-    "id": 7,
+    "_id": "642c155b2c4774f05c36ee9a",
     "campName": "Family Wellness Day",
     "image": "https://i.ibb.co/HqZGNy9/3790074.jpg",
-    "campFees": "$20 (Free for children under 5)",
+    "campFees": 20,
     "scheduledDateTime": "2023-09-10T10:00:00",
     "venueLocation": "Community Recreation Center",
     "specializedServices": ["Family Health Checkup", "Fitness Workshops"],
@@ -91,10 +91,10 @@
     "category": "available-camps"
   },
   {
-    "id": 8,
+    "_id": "642c155b2c4774f05c36ee9b",
     "campName": "Dental Care Clinic",
     "image": "https://i.ibb.co/vsGrNZ8/2009-i511-042-removal-tooth-flat.jpg",
-    "campFees": "$25",
+    "campFees": 25,
     "scheduledDateTime": "2023-10-05T14:30:00",
     "venueLocation": "City Dental Care Center",
     "specializedServices": ["Dental Checkup", "Oral Hygiene Seminars"],
@@ -104,10 +104,10 @@
     "category": "available-camps"
   },
   {
-    "id": 9,
+    "_id": "642c155b2c4774f05c36ee9c",
     "campName": "Nutrition and Fitness Expo",
     "image": "https://i.ibb.co/6HKp6dR/265870-P67-S2-H-991.jpg",
-    "campFees": "$15",
+    "campFees": 15,
     "scheduledDateTime": "2023-11-12T11:30:00",
     "venueLocation": "FitLife Gymnasium",
     "specializedServices": ["Nutritional Consultation", "Fitness Assessments"],
@@ -117,10 +117,10 @@
     "category": "available-camps"
   },
   {
-    "id": 10,
+    "_id": "642c155b2c4774f05c36ee9d",
     "campName": "Vision Care Workshop",
     "image": "https://i.ibb.co/m6wn6nH/40550.jpg",
-    "campFees": "$18",
+    "campFees": 18,
     "scheduledDateTime": "2023-12-08T13:45:00",
     "venueLocation": "City Vision Care Clinic",
     "specializedServices": ["Vision Screening", "Eye Health Seminars"],
@@ -130,10 +130,10 @@
     "category": "available-camps"
   },
   {
-    "id": 11,
+    "_id": "642c155b2c4774f05c36ee9e",
     "campName": "Community Blood Drive",
     "image": "https://i.ibb.co/cb3Pk2y/ravi24-may-8.jpg",
-    "campFees": "Free",
+    "campFees": 16,
     "scheduledDateTime": "2024-01-20T09:00:00",
     "venueLocation": "Community Blood Center",
     "specializedServices": ["Blood Donation", "Health Checkup"],
@@ -143,10 +143,10 @@
     "category": "available-camps"
   },
   {
-    "id": 12,
+    "_id": "642c155b2c4774f05c36ee9f",
     "campName": "Diabetes Management Workshop",
     "image": "https://i.ibb.co/KNY8v3w/5939839.jpg",
-    "campFees": "$12",
+    "campFees": 12,
     "scheduledDateTime": "2024-02-15T15:15:00",
     "venueLocation": "City Diabetes Care Center",
     "specializedServices": ["Diabetes Education", "Blood Sugar Monitoring"],

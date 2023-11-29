@@ -7,6 +7,7 @@ import Swal from "sweetalert2";
 import { useState } from "react";
 import UpdateCampModal from "./UpdateCampModal";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 
 const ManageCamp = () => {
@@ -14,9 +15,6 @@ const ManageCamp = () => {
     const [camp ,,  refetch] = useCamp();
     const axiosSecure  = useAxiosSecure();
 
-
-    const [isUpdateModalOpen, setUpdateModalOpen] = useState(false);
-  const [selectedCamp, setSelectedCamp] = useState(null);
 
 
     const handleDeleteCamp =  (item) =>{
@@ -61,55 +59,10 @@ const ManageCamp = () => {
 
 
 
-
-    const handleUpdateClick = (item) => {
-        setSelectedCamp(item);
-        setUpdateModalOpen(true);
-      };
-
-
-       // Function to close the update modal
-  const handleCloseUpdateModal = () => {
-    setUpdateModalOpen(false);
-  };
-
-
-   // Function to handle updating the camp details
-   const handleUpdateCamp = async (updatedData) => {
-    // Send the updated data to the server
-    try {
-      const res  = await axiosSecure.put(`/update-camp/${selectedCamp._id}`, updatedData);
-      // Handle success, e.g., refetch the data
-      refetch();
-
-      Swal.fire({
-        position: "top-end",
-        icon: "success",
-        title: `${selectedCamp.campName} has been updated`,
-        showConfirmButton: false,
-        timer: 1500
-      });
-
-      // Close the update modal
-      handleCloseUpdateModal();
-    } catch (error) {
-      // Handle error
-      console.error('Error updating camp:', error);
-    }
-  };
-
   console.log(camp);
 
 
 
-
-
-
-
-
-
-
-    
 
 
 
@@ -221,13 +174,8 @@ className="btn btn-outline text-red-700 btn-danger mt-5 ">
       </button>
 
 
-      <button onClick={() => handleUpdateClick(item)} className="btn btn-primary"> update </button>
-      <UpdateCampModal
-              isOpen={isUpdateModalOpen}
-              onClose={handleCloseUpdateModal}
-              campDetails={selectedCamp}
-              onUpdate={handleUpdateCamp}
-            />
+     <Link to={`/dashboard/update-camp-info/${item._id}`}>  <button  className="btn mt-5 btn-info"> update </button> </Link>
+      
 
         </th>
       </tr>

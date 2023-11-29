@@ -22,7 +22,9 @@ const Dashboard = () => {
                 <ul className="camp p-5">
 
                     {
-                        isOrganizer ? <>
+                        isOrganizer
+                        
+                        ? <>
 
                             <li>
 
@@ -164,6 +166,11 @@ const Dashboard = () => {
 
                             </>
                     }
+
+                    
+
+
+
 
 
                     {/* divider */}

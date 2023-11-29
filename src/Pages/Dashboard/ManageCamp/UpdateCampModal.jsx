@@ -27,7 +27,9 @@ const UpdateCampModal = ({ isOpen, onClose, campDetails, onUpdate }) => {
 
   return (
     <div>
-      {isOpen && (
+      {isOpen 
+      
+      && (
         <div className="modal">
           <div className="modal-content">
             <span className="modal-close" onClick={onClose}>&times;</span>

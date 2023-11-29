@@ -51,7 +51,7 @@ const AddCamp = () => {
             }
 
 
-            const campRes = await axiosSecure.post('/camp' , campData)
+            const campRes = await axiosSecure.post('/camps' , campData)
             console.log(campRes.data);
             if(campRes.data.insertedId){
                 reset()

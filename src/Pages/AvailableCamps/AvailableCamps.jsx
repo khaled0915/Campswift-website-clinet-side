@@ -118,7 +118,7 @@ const AvailableCamps = () => {
         <th>
 
 
-        <Link to={`/camp/camp-details/${item._id}`} > 
+        <Link to={`/camps/camp-details/${item._id}`} > 
             
             <button 
 

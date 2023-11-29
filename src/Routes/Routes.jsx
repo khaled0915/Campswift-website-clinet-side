@@ -20,6 +20,7 @@ import ManageRegCamp from "../Pages/Dashboard/ManageRegCamp/ManageRegCamp";
 import RegisteredCamp from "../Pages/Dashboard/RegisteredCamp/RegisteredCamp";
 import OrganizerProfile from "../Pages/Dashboard/OrganizerProfile/OrganizerProfile";
 import Payment from "../Pages/Dashboard/Payment/Payment";
+import UpdateCampInfo from "../Pages/Dashboard/UpdateCampInfo/UpdateCampInfo";
 
 
 
@@ -45,9 +46,9 @@ import Payment from "../Pages/Dashboard/Payment/Payment";
             element : <SignUp></SignUp>
         },
         {
-            path : '/camp/camp-details/:id',
+            path : '/camps/camp-details/:id',
             element : <PrivateRoute> <CampDetails ></CampDetails>  </PrivateRoute>,
-            loader : ({params}) => fetch(`http://localhost:5000/camp/camp-details/${params.id}`)
+            loader : ({params}) => fetch(`http://localhost:5000/camps/camp-details/${params.id}`)
         },
         {
             path : '/availableCamps',
@@ -103,6 +104,11 @@ children : [
   {
     path : 'manage-registered-camps' ,
     element : <OrganizerRoute> <ManageRegCamp></ManageRegCamp> </OrganizerRoute>
+  },
+  {
+    path : 'update-camp-info/:id',
+    element : <OrganizerRoute> <UpdateCampInfo></UpdateCampInfo> </OrganizerRoute>,
+    loader : ({params}) => fetch(`http://localhost:5000/camps/${params.id}`)
   }
  
 ]

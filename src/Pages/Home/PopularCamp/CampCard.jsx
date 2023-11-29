@@ -68,7 +68,7 @@ const CampCard = ({camp}) => {
              <p className="bg-orange-700 text-white font-bold hover:underline mt-10 ">   camp Fees : {campFees} </p>
 
 
-            <Link to={`/camp/camp-details/${_id}`} > 
+            <Link to={`/camps/camp-details/${_id}`} > 
             
             <button 
 
