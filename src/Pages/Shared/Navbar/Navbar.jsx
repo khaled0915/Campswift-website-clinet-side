@@ -22,12 +22,12 @@ const Navbar = () => {
 
 
             <li>
-                <Link to='/'>
+                <Link className=" bg-emerald-500 " to='/'>
                     Home </Link>
 
             </li>
             <li>
-                <Link to='/availableCamps'>
+                <Link className="bg-green-500" to='/availableCamps'>
                 Available Camps
 
 
@@ -37,7 +37,7 @@ const Navbar = () => {
             <li>
 
                 
-                 <Link to='/dashboard'>
+                 <Link className="bg-pink-500" to='/dashboard'>
 
 
                  Dashboard 
@@ -46,7 +46,7 @@ const Navbar = () => {
 
             <li> 
                 
-                <Link to='/contactUs'>
+                <Link className="bg-teal-500" to='/contactUs'>
 
                 Contact Us
                 
@@ -57,7 +57,7 @@ const Navbar = () => {
 
         </>
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar md:bg-orange-400 bg-base-100">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -86,7 +86,7 @@ const Navbar = () => {
                 <>
 
 <div className="dropdown dropdown-bottom md:dropdown-right dropdown-end">
-  <label tabIndex={0} className="btn m-1"> 
+  <label tabIndex={0} className="btn bg-sky-400 m-1"> 
 
   <img    className="w-[40px] h-[40px] rounded-full" src={user?.photoURL
 } alt="" />

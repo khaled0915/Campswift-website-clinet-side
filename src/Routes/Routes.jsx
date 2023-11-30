@@ -98,6 +98,7 @@ children : [
   {
     path : 'organizer-profile',
     element : <OrganizerRoute><OrganizerProfile></OrganizerProfile></OrganizerRoute>
+    // loader : ({params}) => fetch(`https://medical-camp-management-server.vercel.app/users/${params.id}`)
   },
   {
     path : 'add-a-camp',

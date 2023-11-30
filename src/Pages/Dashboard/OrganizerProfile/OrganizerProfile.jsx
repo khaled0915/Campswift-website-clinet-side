@@ -1,6 +1,9 @@
+import { useLoaderData } from "react-router-dom";
 
 
 const OrganizerProfile = () => {
+    const user = useLoaderData();
+    console.log(user);
     return (
         <div>
 

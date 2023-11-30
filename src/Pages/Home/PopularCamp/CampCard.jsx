@@ -65,7 +65,7 @@ const CampCard = ({camp}) => {
 
              <p className="underline text-violet-800 ">  target Audience : {targetAudience}  </p>
 
-             <p className="bg-orange-700 text-white font-bold hover:underline mt-10 ">   camp Fees : {campFees} </p>
+             <p className="bg-orange-700 text-white font-bold hover:underline mt-10 ">   camp Fees : $ {campFees} </p>
 
 
             <Link to={`/camps/camp-details/${_id}`} > 

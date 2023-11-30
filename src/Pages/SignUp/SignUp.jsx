@@ -45,7 +45,6 @@ const SignUp = () => {
                 name : data.name ,
                 email : data.email ,
 
-                role : data.role 
                 
               }
 
@@ -59,27 +58,17 @@ const SignUp = () => {
 
 
                   reset();
-                  // Swal.fire({
-                  //     position: "top-end",
-                  //     icon: "success",
-                  //     title: "user created successfully",
-                  //     showConfirmButton: false,
-                  //     timer: 1500
-                  //   });
+                  Swal.fire({
+                      position: "top-end",
+                      icon: "success",
+                      title: "user created successfully",
+                      showConfirmButton: false,
+                      timer: 1500
+                    });
 
-                    // navigate('/')
+                    navigate('/')
 
-                    if(data.role === 'Organizer'){
-                      navigate('//dashboard/organizer-profile')
-                    }
-                    else if(data.role === 'Participant')
-                     {
-                      navigate('/dashboard/participant-profile')
-
-                    }
-                    else {
-                      navigate('/');
-                    }
+                 
                   
                 }
               })
@@ -137,12 +126,7 @@ const SignUp = () => {
                 </div>
 
 
-                <select name='role' {...register("role" , { required: true})} className="select select-accent w-full max-w-xs">
-  <option disabled selected> Your Role </option>
-  <option> Participant </option>
-  <option> Organizer </option>
-  <option> Health Care Professional </option>
-</select>
+        
 
 
 
