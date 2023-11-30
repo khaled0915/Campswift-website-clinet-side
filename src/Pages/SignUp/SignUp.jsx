@@ -43,7 +43,10 @@ const SignUp = () => {
 
               const userInfo = {
                 name : data.name ,
-                email : data.email 
+                email : data.email ,
+
+                role : data.role 
+                
               }
 
               // create user entry in the database
@@ -56,14 +59,27 @@ const SignUp = () => {
 
 
                   reset();
-                  Swal.fire({
-                      position: "top-end",
-                      icon: "success",
-                      title: "user created successfully",
-                      showConfirmButton: false,
-                      timer: 1500
-                    });
-                    navigate('/')
+                  // Swal.fire({
+                  //     position: "top-end",
+                  //     icon: "success",
+                  //     title: "user created successfully",
+                  //     showConfirmButton: false,
+                  //     timer: 1500
+                  //   });
+
+                    // navigate('/')
+
+                    if(data.role === 'Organizer'){
+                      navigate('//dashboard/organizer-profile')
+                    }
+                    else if(data.role === 'Participant')
+                     {
+                      navigate('/dashboard/participant-profile')
+
+                    }
+                    else {
+                      navigate('/');
+                    }
                   
                 }
               })
@@ -119,6 +135,19 @@ const SignUp = () => {
         
                   {errors.name && <span className="text-red-500">This field is required</span>}
                 </div>
+
+
+                <select name='role' {...register("role" , { required: true})} className="select select-accent w-full max-w-xs">
+  <option disabled selected> Your Role </option>
+  <option> Participant </option>
+  <option> Organizer </option>
+  <option> Health Care Professional </option>
+</select>
+
+
+
+
+                
 
 
                 <div className="form-control">

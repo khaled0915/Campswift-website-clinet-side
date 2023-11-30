@@ -178,7 +178,7 @@ const CampDetails = () => {
             {/* Open the modal using document.getElementById('ID').showModal() method */}
 
             {
-              isOrganizer ? 
+              isOrganizer  ? 
 
 
               <button className="btn btn-accent hidden ">
@@ -189,6 +189,7 @@ const CampDetails = () => {
               
 
   :
+
 
   <button 
 

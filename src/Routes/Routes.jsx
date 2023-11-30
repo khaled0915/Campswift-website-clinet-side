@@ -54,8 +54,8 @@ import ContactUs from "../Pages/ContactUs/ContactUs";
         },
         {
             path : '/camps/camp-details/:id',
-            element : <PrivateRoute> <CampDetails ></CampDetails>  </PrivateRoute>,
-            loader : ({params}) => fetch(`http://localhost:5000/camps/camp-details/${params.id}`)
+            element : <PrivateRoute> <CampDetails ></CampDetails> </PrivateRoute>,
+            loader : ({params}) => fetch(`https://medical-camp-management-server.vercel.app/camps/camp-details/${params.id}`)
         },
         {
             path : '/availableCamps',
@@ -110,12 +110,13 @@ children : [
   },
   {
     path : 'manage-registered-camps' ,
-    element : <OrganizerRoute> <ManageRegCamp></ManageRegCamp> </OrganizerRoute>
+    element : <OrganizerRoute> <ManageRegCamp></ManageRegCamp> </OrganizerRoute>,
+    loader : () =>fetch('https://medical-camp-management-server.vercel.app/all')
   },
   {
     path : 'update-camp-info/:id',
     element : <OrganizerRoute> <UpdateCampInfo></UpdateCampInfo> </OrganizerRoute>,
-    loader : ({params}) => fetch(`http://localhost:5000/camps/${params.id}`)
+    loader : ({params}) => fetch(`https://medical-camp-management-server.vercel.app/camps/${params.id}`)
   }
  
 ]

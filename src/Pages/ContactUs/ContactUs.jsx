@@ -1,5 +1,8 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
+
+// import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet'
 
 
 
@@ -41,6 +44,12 @@ const ContactUs = () => {
 
     return (
         <div className="bg-gray-100 min-h-screen">
+            <Helmet>
+
+                <title> 
+                    
+                    CampSwift | Contact Us </title>
+            </Helmet>
             <header className="bg-gray-800 text-white text-center py-4">
                 <h1 className="text-2xl font-bold">Contact Us</h1>
             </header>
@@ -99,9 +108,9 @@ const ContactUs = () => {
 
                     <div className="md:w-1/2 md:pl-8">
                         <div className="text-center">
-                            <p className="mb-4">For any inquiries, please contact us at:</p>
-                            <p>Email: info@example.com</p>
-                            <p>Phone: +1 (123) 456-7890</p>
+                            <p className="mb-4 text-xl">For any inquiries, please contact us at:</p>
+                            <p className="text-lg ">Email: Camp@Swift.com</p>
+                            <p className="text-lg mt-5">Phone: +1 (123) 456-7890 0980 </p>
                         </div>
 
                         <img
@@ -112,6 +121,8 @@ const ContactUs = () => {
                     </div>
                 </div>
             </section>
+
+          
         </div>
     );
 };

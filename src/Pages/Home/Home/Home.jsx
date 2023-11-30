@@ -4,6 +4,7 @@ import PopularCamp from "../PopularCamp/PopularCamp";
 import Testimonials from "../Testimonials/Testimonials";
 import UpcomingCamp from "../UpcomingCamp/UpcomingCamp";
 import HealthTip from "../HealthTip/HealthTip";
+import useAuth from "../../../hooks/useAuth";
 // import { useLoaderData } from "react-router-dom";
 
 const Home = () => {
@@ -13,6 +14,8 @@ const Home = () => {
 
     // console.log(camps);
 
+    // const [user] = useAuth()
+    // console.log(user.email , user.role);
 
     return (
         <div>

@@ -4,8 +4,7 @@ import useCamp from "../../../hooks/useCamp";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
 
-import { useState } from "react";
-import UpdateCampModal from "./UpdateCampModal";
+
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -38,7 +37,7 @@ const ManageCamp = () => {
                     Swal.fire({
                         position: "top-end",
                         icon: "success",
-                        title: `${item.name} has been deleted`,
+                        title: `${item.campName} has been deleted`,
                         showConfirmButton: false,
                         timer: 1500
                       });

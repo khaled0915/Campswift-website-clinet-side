@@ -3,6 +3,7 @@ import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import { Helmet } from "react-helmet-async";
 import { FaTrash, FaUser } from "react-icons/fa";
 import useParticipant from "../../../hooks/useParticipant";
+import { useLoaderData } from "react-router-dom";
 
 
 const ManageRegCamp = () => {
@@ -19,9 +20,13 @@ const ManageRegCamp = () => {
     // }) ;
 
 
-    const [participant  ] = useParticipant()
+    // const [participant  ] = useParticipant()
 
-    console.log(participant);
+    // console.log(participant);
+
+    const RegInfo = useLoaderData();
+
+    console.log(RegInfo);
 
 
 
@@ -35,6 +40,8 @@ const ManageRegCamp = () => {
             <h3 className="text-3xl text-center p-4 underline font-bold text-stone-500 ">This is manage reg camps</h3>
 
 
+<h3> {RegInfo.length} </h3>
+
 
             <div className="overflow-x-auto">
   <table className="table table-zebra w-full" >
@@ -42,26 +49,45 @@ const ManageRegCamp = () => {
     <thead>
       <tr>
         <th></th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Role</th>
-        <th>Action</th>
+        <th>Camp Name</th>
+        <th>Date and Time,</th>
+        <th>Venue</th>
+        <th> Camp
+Fees</th>
+        <th>  Payment Status</th>
+        <th> Confirmation Status</th>
+        <th>  Actions</th>
       </tr>
     </thead>
     <tbody>
       {
-        participant.map((user , index) => 
+        RegInfo.map((user , index) => 
             <tr key={user._id}>
 
             <th>{index+1}</th>
             <td> {user.campName } </td>
-            <td> {user.email} </td>
+            <td> {user.scheduledDateTime
+} </td>
             <td> 
+
+              {user.venueLocation}
 
 
   
                 
            
+                 </td>
+
+                 <td>
+                  {user.campFees}
+                 </td>
+
+                 <td>
+                  Yet to pay
+                 </td>
+
+                 <td>
+                  <button className="btn"> pending </button>
                  </td>
 
                  <td> 

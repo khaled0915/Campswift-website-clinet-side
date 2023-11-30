@@ -4,9 +4,16 @@ import useOrganizer from "../hooks/useOrganizer";
 import { Helmet } from "react-helmet-async";
 
 
-const Dashboard = () => {
+
+const Dashboard = () => 
+
+{
+
+
 
     const [isOrganizer] = useOrganizer() ;
+
+
 
 
 

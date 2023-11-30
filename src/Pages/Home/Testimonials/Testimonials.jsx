@@ -16,7 +16,7 @@ const Testimonials = () => {
 
     useEffect( () =>{
 
-        fetch( 'http://localhost:5000/feedbacks' )
+        fetch( 'https://medical-camp-management-server.vercel.app/feedbacks' )
         .then(res => res.json())
         .then( data=>  setFeedbacks(data) ) 
 

@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import SocialLogin from "../../Components/SocialLogin/SocialLogin";
+import useAuth from "../../hooks/useAuth";
 
 
 const Login = () => {
@@ -11,6 +12,8 @@ const Login = () => {
 
 
     const {signIn} = useContext(AuthContext);
+
+    // const [user] = useAuth;
 
     const navigate = useNavigate();
 
@@ -33,23 +36,35 @@ const Login = () => {
             const user = result.user ;
             console.log(user);
 
-            Swal.fire({
-                title: "user login successfully",
-                showClass: {
-                  popup: `
-                    animate__animated
-                    animate__fadeInUp
-                    animate__faster
-                  `
-                },
-                hideClass: {
-                  popup: `
-                    animate__animated
-                    animate__fadeOutDown
-                    animate__faster
-                  `
-                }
-              });
+            if(user.role === 'Organizer'){
+              navigate('//dashboard/organizer-profile')
+            }
+            else if(user.role === 'Participant')
+             {
+              navigate('/dashboard/participant-profile')
+
+            }
+            else {
+              navigate('/');
+            }
+
+            // Swal.fire({
+            //     title: "user login successfully",
+            //     showClass: {
+            //       popup: `
+            //         animate__animated
+            //         animate__fadeInUp
+            //         animate__faster
+            //       `
+            //     },
+            //     hideClass: {
+            //       popup: `
+            //         animate__animated
+            //         animate__fadeOutDown
+            //         animate__faster
+            //       `
+            //     }
+            //   });
 
               navigate(from , {replace : true})
 
