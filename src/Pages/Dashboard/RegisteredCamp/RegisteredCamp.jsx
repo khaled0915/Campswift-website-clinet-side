@@ -23,7 +23,7 @@ const RegisteredCamp = () => {
 
 
     return (
-        <div>
+        <div className="bg-pink-400 text-black">
 
 <Helmet>
                 <title> Dashboard | registered Camp  </title>

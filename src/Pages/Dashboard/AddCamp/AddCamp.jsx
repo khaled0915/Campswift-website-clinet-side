@@ -82,7 +82,7 @@ const AddCamp = () => {
         
         console.log(data)}
     return (
-        <div className="p-5 m-5">
+        <div className="p-5 bg-teal-300 m-5">
 
             <Helmet> 
 

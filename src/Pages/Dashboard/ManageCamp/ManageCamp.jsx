@@ -73,25 +73,25 @@ const ManageCamp = () => {
 
             </Helmet>
 
-            <h3 className="text-3xl uppercase text-white bg-pink-500 mt-10 text-center"> this is manage camp page </h3>
+            <h3 className="text-3xl uppercase text-white bg-pink-500 mt-10 mb-10 text-center"> this is manage camp page </h3>
             <div>
             <div className="overflow-x-auto">
   <table className="table">
     {/* head */}
     <thead>
-      <tr>
+      <tr className="font-bold border border-r-2 bg-red-600 text-white   ">
       <th>
           #
           
         </th>
-        <th> Camp Name</th>
-        <th>purposeBenefits</th>
-        <th> Date  </th>
-        <th > Venue  </th>
-        <th > Service Provide  </th>
-        <th > HealthCare Professionals   </th>
-        <th > Target Audience   </th>
-        <th> Action </th>
+        <th className="border border-r-3"> Camp Name</th>
+        <th className="border border-r-3">purposeBenefits</th>
+        <th className="border border-r-3"> Date  </th>
+        <th className="border border-r-3" > Venue  </th>
+        <th className="border border-r-3"> Service Provide  </th>
+        <th className="border border-r-3"> HealthCare Professionals   </th>
+        <th className="border border-r-3" > Target Audience   </th>
+        <th className="border border-r-3"> Action </th>
       </tr>
     </thead>
     <tbody>
@@ -99,29 +99,29 @@ const ManageCamp = () => {
 
     {
         camp.map( (item, index) =>   <tr key={item._id}>
-        <th>
+        <th className="border border-r-3 text-white font-bold bg-green-600">
         {index+1}
         </th>
 
-        <td>
+        <td className="border border-r-3 text-white font-bold bg-pink-600">
           {item.campName}
         </td>
 
-        <td>
+        <td className="border border-r-3 text-white font-bold bg-red-500">
          
           {item.purposeBenefits}
         </td>
 
-        <td>
+        <td className="border border-r-3 text-white font-bold bg-sky-600">
           {item.scheduledDateTime}
         </td>
         
-        <td>
+        <td className="border border-r-3 text-white font-bold bg-yellow-600">
           {item.venueLocation
 }
         </td>
 
-        <td>
+        <td className="border border-r-3 text-white font-bold bg-orange-600">
 
           
             <li>
@@ -139,7 +139,7 @@ const ManageCamp = () => {
         </td>
 
 
-        <td>
+        <td className="border border-r-3 text-white font-bold bg-slate-400">
           <li>
           {item.healthcareProfessionals[0]}
 
@@ -151,12 +151,12 @@ const ManageCamp = () => {
 
          
         </td>
-        <td>
+        <td className="border border-r-3 text-white font-bold bg-purple-600">
           {item.targetAudience}
         </td>
 
         
-        <th>
+        <th className="border border-r-3 text-white font-bol bg-teal-400">
 
 
         

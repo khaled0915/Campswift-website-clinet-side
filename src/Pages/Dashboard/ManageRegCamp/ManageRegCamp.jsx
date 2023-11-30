@@ -40,7 +40,6 @@ const ManageRegCamp = () => {
             <h3 className="text-3xl text-center p-4 underline font-bold text-stone-500 ">This is manage reg camps</h3>
 
 
-<h3> {RegInfo.length} </h3>
 
 
             <div className="overflow-x-auto">
@@ -49,14 +48,14 @@ const ManageRegCamp = () => {
     <thead>
       <tr>
         <th></th>
-        <th>Camp Name</th>
-        <th>Date and Time,</th>
-        <th>Venue</th>
-        <th> Camp
+        <th className="font-bold text-red-700 bg-green-400 pr-3  ">Camp Name</th>
+        <th className="font-bold text-red-700 bg-green-400 pr-3 ">Date and Time,</th>
+        <th className="font-bold text-red-700 bg-green-400 pr-3">Venue</th>
+        <th className="font-bold text-red-700 bg-green-400 pr-3 "> Camp
 Fees</th>
-        <th>  Payment Status</th>
-        <th> Confirmation Status</th>
-        <th>  Actions</th>
+        <th className="font-bold text-red-700 bg-green-400 pr-3 ">  Payment Status</th>
+        <th className="font-bold text-red-700 bg-green-400 pr-3 "> Confirmation Status</th>
+        <th className="font-bold text-red-700 bg-green-400 pr-3 ">  Actions</th>
       </tr>
     </thead>
     <tbody>
@@ -64,11 +63,11 @@ Fees</th>
         RegInfo.map((user , index) => 
             <tr key={user._id}>
 
-            <th>{index+1}</th>
-            <td> {user.campName } </td>
-            <td> {user.scheduledDateTime
+            <th className="font-bold text-sm bg-orange-700 text-white ">{index+1}</th>
+            <td className=" font-bold bg-purple-500 "> {user.campName } </td>
+            <td className="font-bold bg-pink-400 "> {user.scheduledDateTime
 } </td>
-            <td> 
+            <td className="font-bold bg-slate-300"> 
 
               {user.venueLocation}
 
@@ -78,19 +77,19 @@ Fees</th>
            
                  </td>
 
-                 <td>
+                 <td className="font-bold bg-green-600">
                   {user.campFees}
                  </td>
 
-                 <td>
+                 <td className="font-bold bg-red-400">
                   Yet to pay
                  </td>
 
-                 <td>
+                 <td className="font-bold bg-fuchsia-500">
                   <button className="btn"> pending </button>
                  </td>
 
-                 <td> 
+                 <td className="font-bold bg-sky-500"> 
                  <button
 
                  

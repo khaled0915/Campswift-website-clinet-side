@@ -91,14 +91,14 @@ const AllUsers = () => {
 
 
     return (
-        <div>
+        <div className="bg-orange-300">
 
 <Helmet>
                 <title> Dashboard | All users  </title>
 
             </Helmet>
             <div className="flex justify-evenly my-4">
-                <h2 className="text-3xl "> All users </h2>
+                <h2 className="text-3xl underline text-slate-700 "> All users </h2>
                 <h2 className="text-3xl"> total users {users.length} </h2>
             </div>
             
@@ -106,7 +106,7 @@ const AllUsers = () => {
   <table className="table table-zebra w-full" >
     {/* head */}
     <thead>
-      <tr>
+      <tr className="border border-r-0 m-4 p-5">
         <th></th>
         <th>Name</th>
         <th>Email</th>

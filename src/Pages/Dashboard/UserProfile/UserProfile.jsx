@@ -19,7 +19,7 @@ const UserProfile = () => {
 
 
     return (
-        <div>
+        <div className=" bg-emerald-400 text-black font-bold border  ">
             <h3 className="text-3xl text-center mb-10 underline p-3  text-lime-700 font-bold "> This is Participant profile </h3>
             <div>
 
