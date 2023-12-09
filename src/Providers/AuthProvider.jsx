@@ -115,6 +115,7 @@ const AuthProvider = ({children}) => {
         googleSignIn
 
     }
+    
     return (
         <AuthContext.Provider value={authInfo} >
             {children}
