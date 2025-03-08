@@ -9,9 +9,17 @@ const firebaseConfig = {
   authDomain: import.meta.env.VITE_authDomain,
   projectId: import.meta.env.VITE_projectId,
   storageBucket: import.meta.env.VITE_storageBucket,
-  messagingSenderId:import.meta.env.VITE_messagingSenderId ,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
   appId: import.meta.env.VITE_appId
 };
+
+// Log Firebase config (without sensitive data)
+console.log("Firebase initialized with:", {
+  authDomain: firebaseConfig.authDomain,
+  projectId: firebaseConfig.projectId,
+  storageBucket: firebaseConfig.storageBucket,
+  apiKeyProvided: !!firebaseConfig.apiKey
+});
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
